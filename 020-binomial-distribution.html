@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="generator" content="pandoc via Lantern" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/pico.min.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/theme-switcher.css">
+    <link rel="stylesheet" href="css/html.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <title>Title | </title>
+
+    
+
+    <!-- Loads AnchorJS library: https://www.bryanbraun.com/anchorjs/ -->
+    <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+
+    <!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
+
+    
+</head>
+
+<body>
+    <div class="theme-switcher">
+        <ul>
+            <li><a href="#" data-theme-switcher="light">Light</a></li>
+            <li><a href="#" data-theme-switcher="dark">Dark</a></li>
+        </ul>
+    </div>
+   
+    <h1 class="sr-only">Title</h1>
+    
+    <main class="container">
+        <div class="grid">
+            <div class="toc">
+                <aside>
+                    <nav>
+                        <a href="index.html" class="back">
+                            Back to Home
+                        </a>
+                        <ul>                      
+                            <li><a href="001-preface.html"></a></li>                      
+                            <li><a href="010-chapter-one.html">Title of Chapter</a></li>                      
+                            <li><a href="010-probability.html"></a></li>                      
+                            <li><a href="020-binomial-distribution.html">Binomial Distribution</a></li>                         
+                        </ul>
+                        <a href="#top" class="back">
+                            Back to Top
+                        </a>
+                    </nav>
+                </aside>
+            </div>
+            <div class="content" id="#top">
+                <h2></h2>
+<h2 id="binomial-distribution">Binomial Distribution</h2>
+<p><em>Author(s)</em></p>
+<p>David M. Lane</p>
+<p><em>Prerequisites</em></p>
+<p>Distributions, Basic Probability, Variability</p>
+<p><strong>Learning Objectives</strong></p>
+<blockquote>
+<p>1. Define binomial outcomes</p>
+<p>2. Compute the probability of getting X successes in N trials</p>
+<p>3. Compute cumulative binomial probabilities</p>
+<p>4. Find the mean and standard deviation of a binomial distribution</p>
+</blockquote>
+<p>When you flip a coin, there are two possible outcomes: heads and tails. Each outcome has a fixed probability, the same from trial to trial. In the case of coins, heads and tails each have the same probability of 1/2. More generally, there are situations in which the coin is biased, so that heads and tails have different probabilities. In the present section, we consider probability distributions for which there are just two possible outcomes with fixed probabilities summing to one. These distributions are called binomial distributions.</p>
+<h3 id="a-simple-example">A Simple Example</h3>
+<p>The four possible outcomes that could occur if you flipped a coin twice are listed below in Table 1. Note that the four outcomes are equally likely: each has probability 1/4. To see this, note that the tosses of the coin are independent (neither affects the other). Hence, the probability of a head on Flip 1 and a head on Flip 2 is the product of P(H) and P(H), which is 1/2 x 1/2 = 1/4. The same calculation applies to the probability of a head on Flip 1 and a tail on Flip 2. Each is 1/2 x 1/2 = 1/4.</p>
+<p>Table 1. Four Possible Outcomes.</p>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 29%" />
+<col style="width: 37%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Outcome</th>
+<th style="text-align: left;">First Flip</th>
+<th style="text-align: left;">Second Flip</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Heads</td>
+<td style="text-align: left;">Heads</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Heads</td>
+<td style="text-align: left;">Tails</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Tails</td>
+<td style="text-align: left;">Heads</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Tails</td>
+<td style="text-align: left;">Tails</td>
+</tr>
+</tbody>
+</table>
+<p>The four possible outcomes can be classified in terms of the number of heads that come up. The number could be two (Outcome 1), one (Outcomes 2 and 3) or 0 (Outcome 4). The probabilities of these possibilities are shown in Table 2 and in Figure 1. Since two of the outcomes represent the case in which just one head appears in the two tosses, the probability of this event is equal to 1/4 + 1/4 = 1/2. Table 2 summarizes the situation.</p>
+<p>Table 2. Probabilities of Getting 0, 1, or 2 Heads.</p>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 58%" />
+<col style="width: 39%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Number of Heads</th>
+<th style="text-align: left;">Probability</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1/4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1/2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">1/4</td>
+</tr>
+</tbody>
+</table>
+<p><img src="images/media/image1.png" style="width:4.92708in;height:3.51042in" /></p>
+<p>Figure 1. Probabilities of 0, 1, and 2 heads.</p>
+<p>Figure 1 is a discrete probability distribution: It shows the probability for each of the values on the X-axis. Defining a head as a "success," Figure 1 shows the probability of 0, 1, and 2 successes for two trials (flips) for an event that has a probability of 0.5 of being a success on each trial. This makes Figure 1 an example of a binomial distribution.</p>
+<h3 id="the-formula-for-binomial-probabilities">The Formula for Binomial Probabilities</h3>
+<p>The binomial distribution consists of the probabilities of each of the possible numbers of successes on N trials for independent events that each have a probability of π (the Greek letter pi) of occurring. For the coin flip example, N = 2 and π = 0.5. The formula for the binomial distribution is shown below:</p>
+<p>where P(x) is the probability of x successes out of N trials, N is the number of trials, and π is the probability of success on a given trial. Applying this to the coin flip example,</p>
+<p>If you flip a coin twice, what is the probability of getting one or more heads? Since the probability of getting exactly one head is 0.50 and the probability of getting exactly two heads is 0.25, the probability of getting one or more heads is 0.50 + 0.25 = 0.75.</p>
+<p>Now suppose that the coin is biased. The probability of heads is only 0.4. What is the probability of getting heads at least once in two tosses? Substituting into the general formula above, you should obtain the answer .64.</p>
+<h3 id="mean-and-standard-deviation-of-binomial-distributions">Mean and Standard Deviation of Binomial Distributions</h3>
+<p>Consider a coin-tossing experiment in which you tossed a coin 12 times and recorded the number of heads. If you performed this experiment over and over again, what would the mean number of heads be? On average, you would expect half the coin tosses to come up heads. Therefore the mean number of heads would be 6. In general, the mean of a binomial distribution with parameters N (the number of trials) and π (the probability of success on each trial) is:</p>
+<p>μ = Nπ</p>
+<p>where μ is the mean of the binomial distribution. The variance of the binomial distribution is:</p>
+<p>σ<sup>2</sup> = Nπ(1-π)</p>
+<p>where σ<sup>2</sup> is the variance of the binomial distribution.</p>
+<p>Let's return to the coin-tossing experiment. The coin was tossed 12 times, so N = 12. A coin has a probability of 0.5 of coming up heads. Therefore, π = 0.5. The mean and variance can therefore be computed as follows:</p>
+<p>μ = Nπ = (12)(0.5) = 6</p>
+<p>σ<sup>2</sup> = Nπ(1-π) = (12)(0.5)(1.0 - 0.5) = 3.0.</p>
+<p>Naturally, the standard deviation (σ) is the square root of the variance (σ<sup>2</sup>).</p> 
+            </div>
+        </div>
+    </main>
+    
+
+    <script>
+        /* pandoc creates two page titles; let's remove the first one */
+        page_titles = document.querySelectorAll('h2');
+        first = page_titles[0];
+        first.remove();
+
+    </script>
+
+    <script>
+        /* AnchorJS docs: https://www.bryanbraun.com/anchorjs/ */
+        anchors.add();
+    </script>
+
+    <script>
+        (function() {
+            var links = document.getElementsByTagName('a');
+            for (var i = 0; i < links.length; i++) {
+                if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+                    links[i].target = '_blank';
+                }
+            }
+        })();
+    </script>
+
+    <!-- Minimal theme switcher -->
+    <script src="js/minimal-theme-switcher.js"></script>
+
+</body>
+
+</html>

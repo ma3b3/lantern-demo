@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="generator" content="pandoc via Lantern" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/pico.min.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/theme-switcher.css">
+    <link rel="stylesheet" href="css/html.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <title>Title | </title>
+
+    
+
+    <!-- Loads AnchorJS library: https://www.bryanbraun.com/anchorjs/ -->
+    <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+
+    <!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
+
+    
+</head>
+
+<body>
+    <div class="theme-switcher">
+        <ul>
+            <li><a href="#" data-theme-switcher="light">Light</a></li>
+            <li><a href="#" data-theme-switcher="dark">Dark</a></li>
+        </ul>
+    </div>
+   
+    <h1 class="sr-only">Title</h1>
+    
+    <main class="container">
+        <div class="grid">
+            <div class="toc">
+                <aside>
+                    <nav>
+                        <a href="index.html" class="back">
+                            Back to Home
+                        </a>
+                        <ul>                      
+                            <li><a href="001-preface.html"></a></li>                      
+                            <li><a href="010-chapter-one.html">Title of Chapter</a></li>                      
+                            <li><a href="010-probability.html"></a></li>                      
+                            <li><a href="020-binomial-distribution.html">Binomial Distribution</a></li>                         
+                        </ul>
+                        <a href="#top" class="back">
+                            Back to Top
+                        </a>
+                    </nav>
+                </aside>
+            </div>
+            <div class="content" id="#top">
+                <h2></h2>
+<p><strong>Probability</strong></p>
+<p><em>Author(s)</em></p>
+<p>Dan Osherson</p>
+<p><em>Prerequisites</em></p>
+<p>None</p>
+<p><strong>Learning Objectives</strong></p>
+<ol type="1">
+<li><p>Define symmetrical outcomes</p></li>
+<li><p>Distinguish between frequentist and subjective approaches</p></li>
+<li><p>Determine whether the frequentist or subjective approach is better suited for a given situation</p></li>
+</ol>
+<p><strong>Introduction to Probability Standard</strong></p>
+<p><strong>Inferential statistics</strong><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> is built on the foundation of probability theory, and has been remarkably successful in guiding opinion about the conclusions to be drawn from data. Yet (paradoxically) the very idea of probability has been plagued by controversy from the beginning of the subject to the present day. In this section we provide a glimpse of the debate about the interpretation of the probability concept.</p>
+<p>One conception of probability is drawn from the idea of <strong>symmetrical outcomes</strong>. For example, the two possible outcomes of tossing a fair coin seem not to be distinguishable in any way that affects which side will land up or down. Therefore the probability of heads is taken to be 1/2, as is the probability of tails. In general, if there are N symmetrical outcomes, the probability of any given one of them occurring is taken to be 1/N. Thus, if a six-sided die is rolled, the probability of any one of the six sides coming up is 1/6.</p>
+<p>Probabilities can also be thought of in terms of <strong>relative frequencies</strong>. If we tossed a coin millions of times, we would expect the proportion of tosses that came up heads to be pretty close to 1/2. As the number of tosses increases, the proportion of heads approaches 1/2. Therefore, we can say that the probability of a head is 1/2.</p>
+<p>If it has rained in Seattle on 62% of the last 100,000 days, then the probability of it raining tomorrow might be taken to be 0.62. This is a natural idea but nonetheless unreasonable if we have further information relevant to whether it will rain tomorrow. For example, if tomorrow is August 1, a day of the year on which it seldom rains in Seattle, we should only consider the percentage of the time it rained on August 1. But even this is not enough since the probability of rain on the next August 1 depends on the humidity. (The chances are higher in the presence of high humidity.) So, we should consult only the prior occurrences of August 1 that had the same humidity as the next occurrence of August 1. Of course, wind direction also affects probability ... You can see that our sample of prior cases will soon be reduced to the empty set. Anyway, past meteorological history is misleading if the climate is changing.</p>
+<h4 id="review-questions">Review Questions</h4>
+<p><strong>Select all that apply. Probability can be thought of as:</strong></p>
+<ul>
+<li><p>symmetrical outcomes</p></li>
+<li><p>relative frequencies</p></li>
+<li><p>subjective</p></li>
+</ul>
+<p><strong>The paper says there is an 80% chance of rain today, so you plan indoor activities. Then it doesn't rain. Was the forecast wrong?</strong></p>
+<ul>
+<li><p>yes</p></li>
+<li><p>no</p></li>
+</ul>
+<section class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>The branch of statistics concerned with drawing conclusions about a <a href="https://onlinestatbook.com/2/glossary/population.html"><u>population</u></a> from a <a href="https://onlinestatbook.com/2/glossary/sample.html"><u>sample</u></a>. This is generally done through <a href="https://onlinestatbook.com/2/glossary/random_sampling.html"><u>random sampling</u></a>, followed by <a href="https://onlinestatbook.com/2/glossary/inference.html"><u>inferences</u></a> made about <a href="https://onlinestatbook.com/2/glossary/center(distribution).html"><u>central tendency</u></a>, or any of a number of other aspects of a <a href="https://onlinestatbook.com/2/glossary/distribution.html"><u>distribution</u></a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section> 
+            </div>
+        </div>
+    </main>
+    
+
+    <script>
+        /* pandoc creates two page titles; let's remove the first one */
+        page_titles = document.querySelectorAll('h2');
+        first = page_titles[0];
+        first.remove();
+
+    </script>
+
+    <script>
+        /* AnchorJS docs: https://www.bryanbraun.com/anchorjs/ */
+        anchors.add();
+    </script>
+
+    <script>
+        (function() {
+            var links = document.getElementsByTagName('a');
+            for (var i = 0; i < links.length; i++) {
+                if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+                    links[i].target = '_blank';
+                }
+            }
+        })();
+    </script>
+
+    <!-- Minimal theme switcher -->
+    <script src="js/minimal-theme-switcher.js"></script>
+
+</body>
+
+</html>
