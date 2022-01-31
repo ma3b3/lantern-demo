@@ -4,6 +4,8 @@ chapter: 010
 
 # Title of Chapter
 
+Hello, world!
+
 Paragraph. [Link](https://example.com)
 
 ## Section
